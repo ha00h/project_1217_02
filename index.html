@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>틱택토</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="board-wrapper">
+        <h1 class="title">틱택토</h1>
+        <p class="status" data-status>플레이어 X 차례</p>
+        <div class="board" role="grid" aria-label="틱택토 보드">
+          <button class="cell" data-cell data-index="0" aria-label="셀 1"></button>
+          <button class="cell" data-cell data-index="1" aria-label="셀 2"></button>
+          <button class="cell" data-cell data-index="2" aria-label="셀 3"></button>
+          <button class="cell" data-cell data-index="3" aria-label="셀 4"></button>
+          <button class="cell" data-cell data-index="4" aria-label="셀 5"></button>
+          <button class="cell" data-cell data-index="5" aria-label="셀 6"></button>
+          <button class="cell" data-cell data-index="6" aria-label="셀 7"></button>
+          <button class="cell" data-cell data-index="7" aria-label="셀 8"></button>
+          <button class="cell" data-cell data-index="8" aria-label="셀 9"></button>
+        </div>
+        <button class="reset" data-reset type="button">다시 시작</button>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
