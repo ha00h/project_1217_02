@@ -1,0 +1,99 @@
+:root {
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #111;
+  background-color: #f9f9fb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app {
+  width: min(420px, 100%);
+  margin: 0 auto;
+}
+
+.board-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.status {
+  margin: 0 0 24px;
+  font-size: 1rem;
+  color: #444;
+  min-height: 1.5rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.cell {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  border: 2px solid #dde1f0;
+  background: #f5f6fb;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.cell:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.cell:not(:disabled):hover {
+  background: #eef2ff;
+  transform: translateY(-2px);
+}
+
+.cell.player-x {
+  color: #ff5a5f;
+}
+
+.cell.player-o {
+  color: #1f8ef1;
+}
+
+.reset {
+  background: #111;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 12px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.reset:hover {
+  opacity: 0.9;
+}
